@@ -1,0 +1,15 @@
+<h2>Show</h2>
+
+<h1><%= @task %></h1>
+
+<%= link_to 'Task', task_path  %>
+
+
+
+<h2><%= @tasks.title %></h2>
+<h2><%= @tasks.details %></h2>
+<h2><%= @tasks.completed %></h2>
+
+<%= link_to "edit", edit_task_path(@tasks)  %>
+<%= link_to "delete", tasks_path(@tasks), method: :delete, data: { confirm: "Delete #{@tasks.title}?" }  %>
+<%= link_to 'tasks', tasks_path  %>
